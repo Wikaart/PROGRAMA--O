@@ -1,0 +1,34 @@
+Converter em dinheiro:
+"VAR" toLocaleString('pr-br', {style: 'currency', currency: 'USD'}) 
+
+Prompt para interagir com usuário através da caixa, deixar texto em negrito e contar letras:
+document.write(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras e ele é lindo!<br/>`)
+
+
+Texto maiúsculo e minúsculo respectivamente:
+document.write(`seu nome em letras maiúsculas é ${nome.toUpperCase()}<br/>`)
+document.write(`seu nome em letras minúsculas é ${nome.toLowerCase()}`)
+
+Definir variável(eis):
+var =
+
+Texto (HTML):
+<h1><h1>
+
+CCL BASE:
+
+background-color: rgb(159, 133, 237);
+    color: white;
+    font: normal 20pt Arial;
+
+    h1 {
+        color: black;
+    }
+
+cria caixa:
+alert.
+
+VISUAL CODE (iniciar código):
+HTML:5
+
+Ctrl, Shift e ' = Node

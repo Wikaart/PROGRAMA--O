@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WKSTORE</title>
+
+    <style>
+        body 
+        {
+            background-color: rgb(222, 189, 189);
+            color: white;
+            font: normal 20pt Arial;
+            display: none; /* conteúdo escondido até validar idade */
+        }
+
+        h1 {
+            color: rgb(9, 0, 0);
+        }
+
+        p {
+            color: black;
+            font: normal 10pt Lato;
+        }
+
+        .gif-container {
+            display: block;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        img {
+            max-width: 90%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 5px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <input id="tarefa" type="text" placeholder="Pesquise alguma coisa fi di rapariga" />
+        <button id="salvar">Salvar</button> 
+        <div id="tarefas-salvas"></div>
+    </div>
+        
+    <h1>OLÁ A TODOS, SEJAM BEM-VINDOS AO MEU MUNDO!</h1>
+
+    <p>Aqui é apenas uma área teste para amigos de boy Will, mas podem ficar de boa pq vocês me conhecem kkkk</p>
+
+    <div class="gif-container" id="gifContainer">
+        <img src="https://xgifsbr.com/wp-content/uploads/2021/05/nico-robin-enrabada-por-negao.gif" alt="gif">
+        <button id="closeGif">Fechar GIF</button>
+    </div>
+
+    <script>
+        alert('CUIDADO COM O JURUBOY!!!');
+
+        const nome = prompt('Qual é o seu nome?');
+        alert(`Oi ${nome.toUpperCase()}, um prazer te ver aqui safadinho`);
+
+        let idade = null;
+
+        // Loop de validação da idade
+        while (true) {
+            idade = prompt('Qual a sua idade mocinho?');
+
+            if (!idade || isNaN(idade)) {
+                alert('Digite apenas números válidos!');
+                continue;
+            }
+
+            idade = parseInt(idade);
+
+            if (idade < 18) {
+                alert('Você é menor de idade! Tente novamente.');
+                continue;
+            }
+
+            break; // idade válida >= 18
+        }
+
+        alert(`Nossa, ${idade} já dá para fazer um sexo gostoso`);
+        document.body.style.display = "block"; // mostra o conteúdo
+
+        // Função para fechar o GIF
+        const closeButton = document.getElementById('closeGif');
+        closeButton.addEventListener('click', () => {
+            const gifContainer = document.getElementById('gifContainer');
+            gifContainer.style.display = 'none';
+        });
+    </script>
+
+</body>
+
+</html>
