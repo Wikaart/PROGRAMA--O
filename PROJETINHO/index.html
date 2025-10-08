@@ -7,12 +7,56 @@
     <title>WKSTORE</title>
 </head>
 <body>
-    <div class="card">
-        <input id="tarefa" type="text" placeholder="Escreva uma tarefa" />
-        <button id="salvar">Salvar</button> 
-        <div id="tarefas-salvas"></div>
-    </div>
 
-    <script src="./script.js"></script>
+<!-- Link do Instagram -->
+<a href="https://www.instagram.com/willerka/" target="_blank" class="instagram-link">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="instagram-logo">
+</a>
+
+<!-- Link do Spotify -->
+<a href="https://open.spotify.com/user/31yfwviyeqdlcxqpakmgz2kpwpxm" target="_blank" class="spotify-link">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Spotify_logo_with_text.svg/839px-Spotify_logo_with_text.svg.png" alt="Spotify" class="spotify-logo">
+</a>
+
+<div class="card" id="card">
+    <input id="tarefa" type="text" placeholder="Digite a Senha" />
+    <input type="button" value="Verificar" onclick="descobrir()">
+    <div id="resultado"></div>
+</div>
+
+<script>
+function descobrir() {
+    var senha = document.getElementById('tarefa').value.trim().toLowerCase();
+    var resultado = document.getElementById('resultado');
+
+    if (senha === "playboi carti") {
+        resultado.innerHTML = 'ACERTOU O NOME DO GOAT';
+        
+        // Inicia contagem regressiva
+        let countdown = 3;
+        const countdownDiv = document.createElement('div');
+        countdownDiv.id = 'countdown';
+        countdownDiv.style.fontSize = '50px';
+        countdownDiv.style.marginTop = '20px';
+        resultado.appendChild(countdownDiv);
+
+        const interval = setInterval(() => {
+            countdownDiv.innerHTML = countdown;
+            countdown--;
+            if (countdown < 0) {
+                clearInterval(interval);
+                // Abrir o vídeo do YouTube automaticamente
+                window.open("https://www.youtube.com/watch?v=4kk1qxKA4ZM&list=RD4kk1qxKA4ZM&start_radio=1", "_blank");
+            }
+        }, 1000);
+
+    } else if (senha === '') {
+        resultado.innerHTML = 'Por favor, digite um nome';
+    } else {
+        resultado.innerHTML = 'Você não acertou o nome do GOAT';
+    }
+}
+</script>
+
 </body>
 </html>

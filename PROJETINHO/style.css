@@ -1,8 +1,66 @@
+body {
+    font: normal 30pt Arial;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    background-image: url('https://media.pitchfork.com/photos/66e443268b07d58435c65871/2:1/w_2240,c_limit/Playboi-Carti.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    position: relative; /* necessário para posicionamento absoluto das logos */
+}
+
+/* Card principal */
 .card {
-    background-color: rgb(56, 56, 116); /* cor de fundo */
-    border-radius: 5px; /* raio da borda */
-    width: 1200px; /* largura */
-    height: auto; /* altura */
-    margin: auto; /* distância das bordas externas */
-    padding: 20px; /* distância das bordas internas */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 40px;
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    top: 50px;
+    text-align: center;
+}
+
+/* Input */
+input {
+    font-size: 24pt;
+    padding: 20px 30px;
+    margin: 15px;
+    border-radius: 30px;
+}
+
+/* Container das logos no canto superior direito */
+.social-links {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    display: flex;
+    gap: 20px; /* espaço entre as logos */
+    align-items: center;
+}
+
+/* Logo do Instagram */
+.instagram-link img {
+    width: 100px;       /* tamanho base */
+    height: auto;      /* mantém proporção */
+    border-radius: 50%;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Logo do Spotify (40% maior que Instagram) */
+.spotify-link img {
+    width: 300px;       /* 60px + 40% */
+    height: auto;
+    border-radius: 15px
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Efeito hover para todas as logos */
+.social-links img:hover {
+    transform: scale(1.2);
+    opacity: 0.9;
 }

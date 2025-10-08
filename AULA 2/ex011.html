@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAÍSES</title>
+    <style>
+        body {
+            font: normal 30pt Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            font-size: 24pt;
+            padding: 5px 10px;
+        }
+        #res {
+            margin-top: 30px;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 10px;
+        } 
+        .brasileiro {
+            color: white;
+            background-color: green;
+        }
+        .estrangeiro {
+            color: white;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>SISTEMA DE NACIONALIDADE</h1>
+    <p>De Onde Você é?</p>
+    <input type="text" id="txtpa" placeholder="Digite seu país">
+    <input type="button" value="Verificar" onclick="descobrir()">
+    
+    <div id="res"></div>
+
+    <script>
+        function descobrir() {
+            var lugar = document.getElementById('txtpa').value.trim().toLowerCase();
+            var res = document.getElementById('res');
+
+            if (lugar === 'brasil') {
+                res.innerHTML = 'Você é Brasileiro';
+                res.className = 'brasileiro';
+            } else if (lugar === '') {
+                res.innerHTML = 'Por favor, digite um país';
+                res.className = '';
+            } else {
+                res.innerHTML = 'Você é Estrangeiro';
+                res.className = 'estrangeiro';
+            }
+        }
+    </script>
+</body>
+</html>
